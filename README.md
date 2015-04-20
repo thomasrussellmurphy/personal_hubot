@@ -115,22 +115,3 @@ extension as a double quoted string to the `hubot-scripts.json` file in this
 repo.
 
 [hubot-scripts]: https://github.com/github/hubot-scripts
-
-##  Persistence
-
-If you are going to use the `hubot-redis-brain` package (strongly suggested),
-you will need to add the Redis to Go addon on Heroku which requires a verified
-account or you can create an account at [Redis to Go][redistogo] and manually
-set the `REDISTOGO_URL` variable.
-
-    % heroku config:add REDISTOGO_URL="..."
-
-If you don't need any persistence feel free to remove the `hubot-redis-brain`
-from `external-scripts.json` and you don't need to worry about redis at all.
-
-[redistogo]: https://redistogo.com/
-
-## Restart the bot
-
-You may want to get comfortable with `heroku logs` and `heroku restart` if
-you're having issues.
